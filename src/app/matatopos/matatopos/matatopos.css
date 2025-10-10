@@ -1,0 +1,47 @@
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:black;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.p{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.casillas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    gap: 5px;
+    background-color:rgb(70, 185, 70);
+
+}
+
+.fila{
+    display: flex;
+    flex-direction: row;
+    background-color:rgb(70, 185, 70);
+    gap: 5px;
+
+}
+
+button{
+    align-items: center;
+    width: 90px;
+    height: 90px;
+    background-color:rgb(167, 142, 142);
+}
+
+.notopo{
+    width: 70px;
+    height: 70px;
+    background-color: black;
+}
+
