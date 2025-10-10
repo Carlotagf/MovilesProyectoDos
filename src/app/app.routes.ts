@@ -10,7 +10,7 @@ export const routes: Routes = [
     {path: 'matatopos', component: Matatopos},
     {path: 'carrera', component: Carrera},
     {path: 'eyecandy', component: EyeCandy},
-     {path: 'listaPersonajes', component: Lista}
+    {path: 'ListaPersonajes', component: Lista}
     
 
 
