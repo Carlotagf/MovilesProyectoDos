@@ -13,6 +13,4 @@ export const routes: Routes = [
     {path: 'ListaPersonajes', component: Lista}
     
 
-
-   
 ];
