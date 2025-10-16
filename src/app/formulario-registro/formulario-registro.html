@@ -1,20 +1,24 @@
 <form [formGroup]="formulario" (ngSubmit)="mostrar()">
-  <div class="contenedor-campo"><label for="nombre">Nombre:</label>
-  <input id="nombre" formControlName="nombre">
-  <small class="mensaje-error">
-    @if (formulario.controls['nombre'].hasError('required')) {El campo nombre es obligatorio}
-    @if (formulario.controls['nombre'].hasError('minlength')){ Mínimo 3 letras}
-    @if (formulario.controls['nombre'].hasError('maxlength')){ Máximo 10 letras}
-  </small>
+<div class="contenedor-campo"><label for="nombre">Nombre:</label>
+<input id="nombre" formControlName="nombre">
+  @if (formulario.controls['nombre'].touched) {
+    <small class="mensaje-error">
+     @if (formulario.controls['nombre'].hasError('required')) {El campo nombre es obligatorio}
+        @if (formulario.controls['nombre'].hasError('minlength')){ Mínimo 3 letras}
+     @if (formulario.controls['nombre'].hasError('maxlength')){ Máximo 10 letras}
+     </small>
+    }
 </div>
 
 <div class="contenedor-campo">
   <label for="email">Email:</label>
   <input id="email" formControlName="email">
-  <small class="mensaje-error">
-    @if (formulario.controls['email'].hasError('required')) {El campo nombre es obligatorio}
-    @if (formulario.controls['email'].hasError('email')){ No cumple con  el fomrmato de un email}
-  </small>
+  @if (formulario.controls['email'].touched) {
+    <small class="mensaje-error">
+     @if (formulario.controls['email'].hasError('required')) {El campo nombre es obligatorio}
+        @if (formulario.controls['email'].hasError('email')){ No cumple con  el fomrmato de un email}
+    </small>
+    }
 </div>
 
   <button type="submit">Enviar</button>
