@@ -21,6 +21,21 @@
     }
 </div>
 
+<div class="contenedor-campo">
+  <label for="edad">Edad:</label>
+  <input type="number" id="edad" formControlName="edad">
+  @if(formulario.controls['edad'].touched){
+  <div class="mensaje-error">
+    @if(formulario.controls['edad'].hasError('required')) { El campo edad es obligatorio }
+     @if(formulario.controls['edad'].hasError('min')) { La edad no es válida }
+  </div>
+  }
+</div>
+
   <button type="submit">Enviar</button>
   <button type="button" (click)="resetear()">Resetear</button>
 </form>
+
+<video autoplay muted loop playsinline class ="backgroung-video">
+  <source src = "/122322-725513185.mp4" type = "video/mp4" />
+</video>
