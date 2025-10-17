@@ -1,11 +1,11 @@
 .mensaje-error{
     color: red;
+    size: small;
 
 }
 
 .contenedor-campo {
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
+ }
 
