@@ -7,7 +7,7 @@
 }
 
 .opcion:hover{
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .nav-halloween{
@@ -21,9 +21,5 @@
     }
 }
 
-@media (max-width: 900px){
-    .opcion1{
-        display: none;
-    }
-}
+
 
