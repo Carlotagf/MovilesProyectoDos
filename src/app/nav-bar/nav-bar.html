@@ -1,21 +1,36 @@
-<mat-toolbar>
-    <span class="example-spacer"></span>
-    <span class="opcion" routerLink="/contador">Contador</span>
-    <span class="example-spacer"></span>
-    <span class="opcion" routerLink="/matatopos">Matatopos</span>
-    <span class="example-spacer"></span>
-    <span class="opcion" routerLink="">Carrera</span>
-    <span class="example-spacer"></span>
-    <span class="opcion" routerLink="/Eye-Candy">Eye-Candy</span>
-    <span class="example-spacer"></span>
-    <span class="opcion" routerLink="/ListaPersonajes" >ListaPersonajes</span>
-    <span class="example-spacer"></span>
-    <span class="opcion" routerLink="formulario-registro">Formulario</span>
-    <span class="example-spacer"></span>
-    <span class="opcion" routerLink="formulario-halloween">Formulario Halloween</span>
+<mat-toolbar color ="primary" [ngClass]="{'nav-halloween': esHalloween}">
     <span class="example-spacer"></span>
 
-    <mat-icon>description</mat-icon>
+    <span class="opcion opcion1" matButton [matMenuTriggerFor]="menu"><mat-icon>more_vert</mat-icon></span>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item routerLink="/contador">Contador</button>
+            <button mat-menu-item routerLink="/matatopos">Matatopos</button>
+            <button mat-menu-item routerLink="/Carrera">Carrera</button>
+            <button mat-menu-item routerLink="/Eye-Candy">Eye-Candy</button>
+            <button mat-menu-item routerLink="/ListaPersonajes">ListaPersonajes</button>
+            <button mat-menu-item routerLink="/formulario-registro">Formulario</button>
+            <button mat-menu-item routerLink="/formulario-halloween">Formulario-halloween</button>
+        </mat-menu>
+    
+    
 
+    <span class="example-spacer"></span>
+    <span class="opcion opcion2" routerLink="/contador">Contador</span>
+    <span class="example-spacer"></span>
+    <span class="opcion opcion2" routerLink="/matatopos">Matatopos</span>
+    <span class="example-spacer"></span>
+    <span class="opcion opcion2" routerLink="">Carrera</span>
+    <span class="example-spacer"></span>
+    <span class="opcion opcion2" routerLink="/Eye-Candy">Eye-Candy</span>
+    <span class="example-spacer"></span>
+    <span class="opcion opcion2" routerLink="/ListaPersonajes" >ListaPersonajes</span>
+    <span class="example-spacer"></span>
+    <span class="opcion opcion2" routerLink="formulario-registro">Formulario</span>
+    <span class="example-spacer"></span>
+    <span class="opcion opcion2" routerLink="formulario-halloween">Formulario Halloween</span>
+    <span class="example-spacer"></span>
+
+    <mat-icon><mat-slide-toggle [(ngModel)]="esHalloween">Slide Toggle Checked: {{esHalloween}}</mat-slide-toggle></mat-icon>
+        
   
 </mat-toolbar>

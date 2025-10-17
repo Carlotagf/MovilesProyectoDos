@@ -2,3 +2,28 @@
     flex: 1 1 auto;
 }
 
+.opcion{
+    cursor: pointer;
+}
+
+.opcion:hover{
+    font-weight: 700;
+}
+
+.nav-halloween{
+    background-color: blueviolet;
+    color: aliceblue;
+}
+
+@media (max-width: 900px){
+    .opcion2{
+        display: none;
+    }
+}
+
+@media (max-width: 900px){
+    .opcion1{
+        display: none;
+    }
+}
+
