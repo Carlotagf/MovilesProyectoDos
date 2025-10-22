@@ -6,11 +6,12 @@ import { Menu } from "./menu/menu/menu";
 import { NavBar } from "./nav-bar/nav-bar";
 import { Carrera } from './carrera/carrera';
 import { EyeCandy } from './eye-candy/eye-candy';
+import { CommonModule } from '@angular/common';
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NavBar],
+  imports: [RouterOutlet, NavBar, CommonModule],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

@@ -1,1 +1,71 @@
-<p>formulario-halloween works!</p>
+
+<h2>🦇 Registro para la Fiesta del Conde Chibi</h2>
+
+<form [formGroup]="formulario" (ngSubmit)="mensaje()">
+  
+  <div>
+    <label>Nombre:</label>
+    <input type="text" formControlName="nombre" [ngClass]="{ 'error': f.nombre.invalid && enviado }" />
+    <div *ngIf="f.nombre.invalid && enviado" class="mensaje-error">
+      👻 Este campo da más miedo vacío, ¡rellénalo!
+    </div>
+  </div>
+
+  
+  <div>
+    <label>Email:</label>
+    <input type="email" formControlName="email" [ngClass]="{ 'error': f.email.invalid && enviado }" />
+    <div *ngIf="f.email.invalid && enviado" class="mensaje-error">
+       Ese correo parece maldito… revisa el formato.
+    </div>
+  </div>
+
+  
+  <div>
+    <label>Tipo de invitado:</label>
+    <select formControlName="tipoInvitado" [ngClass]="{ 'error': f.tipoInvitado.invalid && enviado }">
+      <option value="">-- Selecciona --</option>
+      <option *ngFor="let tipo of tiposInvitado" [value]>{{ "'Humano', 'Fantasma', 'Vampiro', 'Bruja'"}}</option>
+    </select>
+    <div *ngIf="f.tipoInvitado.invalid && enviado" class="mensaje-error">
+       Este campo da más miedo vacío, ¡rellénalo!
+    </div>
+  </div>
+
+  
+  <div>
+    <label>Disfraz:</label>
+    <input type="text" formControlName="disfraz" [ngClass]="{ 'error': f.disfraz.invalid && enviado }" />
+    <div *ngIf="f.disfraz.invalid && enviado" class="mensaje-error">
+       ¡No puedes venir sin disfraz! El Conde se enfadará.
+    </div>
+  </div>
+
+  
+  <div>
+    <label>Fecha de llegada:</label>
+    <input type="date" formControlName="fechaLlegada" [ngClass]="{ 'error': f.fechaLlegada.invalid && enviado }" />
+    <div *ngIf="f.fechaLlegada.invalid && enviado" class="mensaje-error">
+       La fecha es esencial para abrir los portones del castillo.
+    </div>
+  </div>
+
+  
+  <div>
+    <label>
+      <input type="checkbox" formControlName="aceptaReglas" />
+      
+    </label>
+    <div *ngIf="f.aceptaReglas.invalid && enviado" class="mensaje-error">
+      ¡Debes prometerlo! No queremos peleas de colmillos.
+    </div>
+  </div>
+
+  
+  <button type="submit">Registrarse</button>
+</form>
+
+
+<div *ngIf="mensajeBienvenida" class="mensaje-exito">
+  {{ mensajeBienvenida }}
+</div>
