@@ -15,5 +15,6 @@ import { FormsModule } from '@angular/forms';
 })
 export class NavBar {
   esHalloween: boolean = false;
+  esNavidad: boolean = false;
 
 }

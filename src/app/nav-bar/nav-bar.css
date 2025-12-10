@@ -15,6 +15,11 @@
     color: aliceblue;
 }
 
+.navidad {
+     background-color: rgb(248, 50, 0);
+    color: aliceblue;
+}
+
 @media (max-width: 900px){
     .opcion2{
         display: none;
