@@ -1,5 +1,4 @@
 <mat-toolbar color ="primary" [ngClass]="{'nav-halloween': esHalloween}">
- <mat-toolbar color ="primary" [ngClass]="{'nav-esNavidad': esNavidad}"></mat-toolbar>
     <span class="example-spacer"></span>
 
     <span class="opcion opcion1" matButton [matMenuTriggerFor]="menu"><mat-icon>more_vert</mat-icon></span>
@@ -17,7 +16,7 @@
     
     
 
-    <span class="example-spacer"></span>
+     <span class="example-spacer"></span>
     <span class="opcion opcion2" routerLink="/contador">Contador</span>
     <span class="example-spacer"></span>
     <span class="opcion opcion2" routerLink="/matatopos">Matatopos</span>
@@ -38,7 +37,6 @@
 
 
     <span class="opcion"><mat-slide-toggle [(ngModel)]="esHalloween"></mat-slide-toggle></span>
-    <span class="opcion"><mat-slide-toggle [(ngModel)]="esNavidad"></mat-slide-toggle></span>
-        
+    <span class="opcion"><mat-slide-toggle [(ngModel)]="esNavidad"></mat-slide-toggle></span>   
   
 </mat-toolbar>

@@ -4,7 +4,12 @@
 
 .opcion{
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
 }
+
+
 
 .opcion:hover{
     font-weight: 600;
@@ -15,8 +20,8 @@
     color: aliceblue;
 }
 
-.navidad {
-     background-color: rgb(248, 50, 0);
+.nav-navidad{
+    background-color: rgb(238, 7, 7);
     color: aliceblue;
 }
 
@@ -25,6 +30,8 @@
         display: none;
     }
 }
+
+
 
 
 
